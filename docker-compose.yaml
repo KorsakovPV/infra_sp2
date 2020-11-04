@@ -18,7 +18,8 @@ services:
     env_file:
       - ./.env
   web:
-    image: korsakovpv/api_ymdb:v1.00.2020_11_01
+    build: .
+    # image: korsakovpv/api_ymdb:v1.00.2020_11_01
     restart: always
     command: gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
     ports:
