@@ -4,8 +4,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Role(models.TextChoices):
-    # TODO gray гет-текст нормальная тема, но сейчас вы себе просто
-    #  усложнили работу немного
     USER = 'user', _('User')
     MODERATOR = 'moderator', _('Moderator')
     ADMIN = 'admin', _('Admin')

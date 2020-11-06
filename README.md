@@ -19,7 +19,21 @@ git clone https://github.com/KorsakovPV/infra_sp2
 ```
 docker-compose up
 ```
-
+Для того, чтобы выполнить миграцию бд, выполните команды:
+```
+docker-compose run web python manage.py makemigrations
+```
+```
+docker-compose run web python manage.py migrate
+```
+Создать superuser
+```
+docker-compose exec web python manage.py createsuperuser
+```
+По желанию можно подгрузить в базу тестовые данные
+```
+python manage.py loaddata fixtures.json
+```
 
 ### Необходимые компоненты
 
