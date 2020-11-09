@@ -43,6 +43,9 @@ python manage.py loaddata fixtures.json
 docker-compose down
 ```
 
+## Технологии
+Код приложения написан на Python. Применены фреймворки Django, Django rest framework. Для хранения применена база данных PoatgreSQL.
+Для сборки контейнеров и развертывания приложений применен Docker и Docker-Compose.
 
 ### Необходимые компоненты
 
