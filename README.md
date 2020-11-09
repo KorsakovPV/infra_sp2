@@ -38,7 +38,7 @@ python manage.py createsuperuser
 ```
 python manage.py loaddata fixtures.json
 ```
-Остановить работу контейнера и удалить контейнеры можно командой
+Остановить работу и удалить контейнеры можно командой
 ```
 docker-compose down
 ```
