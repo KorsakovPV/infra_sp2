@@ -16,37 +16,37 @@
 ```
 git clone https://github.com/KorsakovPV/infra_sp2
 ```
-Запустите процесс сборки и запуска контейнеров
+В корневой папке находится файл .env.template, в котором описаны все нужные переменные и их примерные значения. По образу и подобию необходимо создать файл .env и заполнить его своими значениями.
+
+Запустите процесс сборки и запуска контейнеров. Для запуска в фоновом режиме примените ключ -d
 ```
 docker-compose up
 ```
-Для того, чтобы выполнить миграцию бд, выполните команды:
+Запустите терминал внутри контейнера (команду необходимо выполнить в папке с файлом docker-compose.yaml)
 ```
-docker-compose run web python manage.py makemigrations
+docker-compose exec web bash
 ```
+Для того, чтобы "накатить" миграцию бд, выполните в текминале контейнера команду
 ```
-docker-compose run web python manage.py migrate
+python manage.py migrate
 ```
-Создать superuser
+Для работы с админкой Django необходимо создать superuser
 ```
-docker-compose exec web python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 По желанию можно подгрузить в базу тестовые данные
 ```
 python manage.py loaddata fixtures.json
 ```
+Остановить работу контейнера и удалить контейнеры можно командой
+```
+docker-compose down
+```
+
 
 ### Необходимые компоненты
 
-Для развернывания приложения необходимо установить
-Docker
-```
-https://docs.docker.com/engine/install/
-```
-и Docker-Compose
-```
-https://docs.docker.com/compose/install/
-```
+Для развернывания приложения необходимо установить **[Docker](https://docs.docker.com/engine/install/)** и **[Docker-Compose](https://docs.docker.com/compose/install/)**
 
 ## Над проектом работали:
 **[Павел Корсаков](https://github.com/KorsakovPV)**. Управление пользователями: система регистрации и аутентификации, права доступа, работа с токеном, система подтверждения e-mail, поля.
