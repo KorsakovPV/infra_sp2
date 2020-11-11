@@ -44,8 +44,8 @@ docker-compose down
 ```
 
 ## Технологии
-Код приложения написан на Python. Применены фреймворки Django, Django rest framework. Для хранения применена база данных PoatgreSQL.
-Для сборки контейнеров и развертывания приложений применен Docker и Docker-Compose.
+Код приложения написан на **[Python](https://www.python.org/)**. Применены фреймворки **[Django](https://www.djangoproject.com/)**, **[Django rest framework](https://www.django-rest-framework.org/)**. Для хранения применена база данных **[PostgreSQL](https://www.postgresql.org/)**.
+Для сборки контейнеров и развертывания приложений применен **[Docker](https://www.docker.com/)** и **[Docker-Compose](https://docs.docker.com/compose/)**.
 
 ### Необходимые компоненты
 
